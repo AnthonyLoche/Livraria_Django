@@ -11,8 +11,18 @@ dependencies = [
     "django-cors-headers>=4.3.1",
     "dotenv>=0.0.5",
     "djangorestframework-simplejwt>=5.3.1",
+    "setuptools>=69.2.0",
+    "python-magic>=0.4.27",
+    "Pillow>=10.2.0",
+    "libmagic>=1.0",
+    "drf-spectacular>=0.27.1",
+    "python-dotenv>=1.0.1",
+    "netifaces>=0.11.0",
 ]
 requires-python = ">=3.10"
 readme = "README.md"
 license = {text = "MIT"}
 
+[tool.pdm.scripts]
+pre_dev = "python ./scripts/set_my_ip.py"
+dev = "python manage.py runserver 0.0.0.0:19003"
