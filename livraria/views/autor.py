@@ -6,5 +6,5 @@ from livraria.models import Autor
 from livraria.serializers import AutorSerializer
 
 class AutorViewSet(ModelViewSet):
-    queryset = Autor
+    queryset = Autor.objects.all()
     serializer_class = AutorSerializer
