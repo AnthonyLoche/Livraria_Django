@@ -8,6 +8,8 @@ from uploader.router import router as uploader_router
 from rest_framework.routers import DefaultRouter
 from usuario.router import router as usuario_router
 
+
+
 from drf_spectacular.views import (
     SpectacularAPIView,
     SpectacularRedocView,
