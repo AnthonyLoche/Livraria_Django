@@ -27,12 +27,14 @@ from livraria.views import CategoriaViewSet
 from livraria.views import LivroViewSet
 from livraria.views import EditoraViewSet
 from livraria.views import AutorViewSet
+from livraria.views import CompraViewSet    
 
 router = DefaultRouter()
 router.register(r"categorias", CategoriaViewSet)
 router.register(r"livros", LivroViewSet)
 router.register(r"editoras", EditoraViewSet)
 router.register(r"autores", AutorViewSet)
+router.register(r"compras", CompraViewSet)
 
 urlpatterns = [
     path("admin/", admin.site.urls),

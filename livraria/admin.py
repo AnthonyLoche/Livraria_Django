@@ -7,8 +7,13 @@ from livraria.models import Autor, Categoria, Editora, Livro, Compra, ItensCompr
 # admin.site.register(Livro)
 # admin.site.register(Autor)
 
-admin.site.register(Compra)
-admin.site.register(ItensCompra)
+class ItensCompraInline(admin.TabularInline):
+    model = ItensCompra
+
+
+@admin.register(Compra)
+class CompraAdmin(admin.ModelAdmin):
+    inlines = [ItensCompraInline]
 
 @admin.register(Autor)
 class AutorAdmin(admin.ModelAdmin):
