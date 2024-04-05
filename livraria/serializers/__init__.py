@@ -2,4 +2,4 @@ from .autor import AutorSerializer
 from .categoria import CategoriaSerializer
 from .editora import EditoraSerializer
 from .livro import LivroSerializer, LivroListSerializer, LivroDetailSerializer
-from .compra import CompraSerializer
+from .compra import CompraSerializer, CriarEditarCompraSerializer, ItensCompraSerializer
