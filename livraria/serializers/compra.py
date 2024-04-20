@@ -16,9 +16,10 @@ class ItensCompraSerializer(ModelSerializer):
 class CompraSerializer(ModelSerializer):
     usuario = serializers.HiddenField(default=serializers.CurrentUserDefault())
     itens = ItensCompraSerializer(many=True, read_only=True)
+    data = serializers.DateTimeField(read_only=True)
     class Meta:
         model = Compra
-        fields = ("id", "usuario", "status", "total", "itens")
+        fields = ("id", "usuario", "status", "total", "data", "itens")
 
     def update(self, instance, validated_data):
         itens = validated_data.pop("itens")

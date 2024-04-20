@@ -6,6 +6,8 @@ from livraria.serializers import CriarEditarCompraSerializer
 class CompraViewSet(ModelViewSet):
     queryset = Compra.objects.all()
     serializer_class = CompraSerializer
+    filterset_fields = ["usuario", "status", "data"]
+    ordering_fields = ["usuario", "status", "data"]
 
     def get_queryset(self):
         usuario = self.request.user
